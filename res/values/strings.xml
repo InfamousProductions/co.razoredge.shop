@@ -2,7 +2,7 @@
 <resources>
 
     <string name="hello">Hello World, MainActivity!</string>
-    <string name="app_name">Razors Edge Barder Shop</string>
+    <string name="app_name">Razors Edge Barber Shop</string>
 	<string name="exitOption">Exit application</string>
     <string name="aboutOption">About</string>
 	<string name="contactOption">Contact us</string>
