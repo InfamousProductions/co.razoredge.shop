@@ -6,6 +6,8 @@
 	<string name="exitOption">Exit application</string>
     <string name="aboutOption">About</string>
 	<string name="contactOption">Contact us</string>
+	<string name="mainOption">Web page</string>
     <string name="developer">Jamison904</string>
+	<string name="about_us">text here</string>
 
 </resources>
