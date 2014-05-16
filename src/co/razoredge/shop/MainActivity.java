@@ -9,6 +9,7 @@ import android.webkit.WebViewClient;
 import android.view.*;
 import android.view.View.OnClickListener;
 import android.widget.*;
+import android.content.*;
 
 public class MainActivity extends Activity {
     /** Called when the activity is first created. */
@@ -36,8 +37,9 @@ public class MainActivity extends Activity {
         }
     }
 	
-	//ID for the menu exit option
+	//ID for the menu exit options
     private final int ID_MENU_EXIT = 1;
+	private final int ID_MENU_ABOUT = 2;
 	
 	@Override
     public boolean onCreateOptionsMenu(Menu menu)
@@ -46,10 +48,7 @@ public class MainActivity extends Activity {
     	super.onCreateOptionsMenu(menu);
     
 		//the menu option text is defined in resources
-		menu.add(R.string.aboutOption);
-
-		//it is better to use final variables for IDs than constant values
-		//menu.add(Menu.NONE,1,Menu.NONE,"Exit");
+		menu.add(Menu.NONE,ID_MENU_ABOUT,Menu.NONE,R.string.aboutOption);
 
 		//get the MenuItem reference
 		menu.add(Menu.NONE,ID_MENU_EXIT,Menu.NONE,R.string.exitOption);
@@ -61,12 +60,23 @@ public class MainActivity extends Activity {
     public boolean onOptionsItemSelected(MenuItem item)
     {
     	//check selected menu item
-    	if(item.getItemId() == ID_MENU_EXIT)
-    	{
+    	switch(item.getItemId()){
+		case ID_MENU_EXIT:
+    	
     		//close the Activity
-    		this.finish();
-    		return true;
+    		finish();
+    		break;
+			
+		case ID_MENU_ABOUT:
+				//define a new Intent for the second Activity
+				Intent intent = new Intent(this,About.class);
+
+				//start the second Activity
+				this.startActivity(intent);
     	}
-    	return false;
-    }
+    	return true;
+		} 
+	
+	
 }
+	
