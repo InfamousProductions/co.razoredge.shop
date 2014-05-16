@@ -40,6 +40,7 @@ public class MainActivity extends Activity {
 	//ID for the menu exit options
     private final int ID_MENU_EXIT = 1;
 	private final int ID_MENU_ABOUT = 2;
+	private final int ID_MENU_CONTACT = 3;
 	
 	@Override
     public boolean onCreateOptionsMenu(Menu menu)
@@ -50,6 +51,9 @@ public class MainActivity extends Activity {
 		//the menu option text is defined in resources
 		menu.add(Menu.NONE,ID_MENU_ABOUT,Menu.NONE,R.string.aboutOption);
 
+		//get the MenuItem reference
+		menu.add(Menu.NONE,ID_MENU_CONTACT,Menu.NONE,R.string.contactOption);
+		
 		//get the MenuItem reference
 		menu.add(Menu.NONE,ID_MENU_EXIT,Menu.NONE,R.string.exitOption);
 		
@@ -73,6 +77,15 @@ public class MainActivity extends Activity {
 
 				//start the second Activity
 				this.startActivity(intent);
+				break;
+				
+		case ID_MENU_CONTACT:
+				//define a new Intent for the second Activity
+				Intent intent2 = new Intent(this,Contact.class);
+
+				//start the second Activity
+				this.startActivity(intent2);
+				
     	}
     	return true;
 		} 

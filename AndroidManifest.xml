@@ -27,6 +27,10 @@
 			android:name="co.razoredge.shop.About"
 			android:label="About">
 		</activity>
+		<activity
+			android:name="co.razoredge.shop.Contact"
+			android:label="Contact">
+		</activity>
     </application>
 
 </manifest>
