@@ -3,6 +3,8 @@
 
     <string name="hello">Hello World, MainActivity!</string>
     <string name="app_name">Razors Edge Barder Shop</string>
- <string name="developer">Jamison904</string>
+	<string name="exitOption">Exit application</string>
+    <string name="aboutOption">About</string>
+    <string name="developer">Jamison904</string>
 
 </resources>
