@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- From: file:/home/jamison/android/projects/co.razoredge.shop/app/src/main/res/values/colors.xml -->
+    <eat-comment />
+
+    <color name="pc_black">#ff141414</color>
+    <color name="pc_blue">#ff0099cc</color>
+    <color name="pc_cat_gray">#ff3b3b3b</color>
+    <color name="pc_gray">#ff333333</color>
+    <color name="pc_hover">#409f9f9f</color>
+    <color name="pc_light_gray">#ff4d4d4d</color>
+    <color name="pc_red">#ffff0000</color>
+    <color name="pc_white">#ffffffff</color>
+    <!-- From: file:/home/jamison/android/projects/co.razoredge.shop/app/src/main/res/values/strings.xml -->
+    <eat-comment />
+
+    <string name="aboutOption">About</string>
+    <string name="about_us">text here</string>
+    <string name="app_name">Razors Edge Barber Shop</string>
+    <string name="contactOption">Contact us</string>
+    <string name="developer">Jamison904</string>
+    <string name="exitOption">Exit application</string>
+    <string name="hello">Hello World, MainActivity!</string>
+    <string name="mainOption">Web page</string>
+    <!-- From: file:/home/jamison/android/projects/co.razoredge.shop/app/src/main/res/values/themes.xml -->
+    <eat-comment />
+
+    <style name="Theme_Dark" parent="android:Theme.Holo">
+        <item name="android:listSeparatorTextViewStyle">@style/pc_pref_cat</item>
+        <item name="android:actionBarStyle">@style/action_bar_style</item>
+        <item name="android:actionOverflowButtonStyle">@style/menu_overflow</item>
+    </style>
+
+    <style name="Theme_Light" parent="android:Theme.Holo.Light">
+        <item name="android:listSeparatorTextViewStyle">@style/pc_pref_cat</item>
+        <item name="android:actionBarStyle">@style/action_bar_style</item>
+        <item name="android:actionOverflowButtonStyle">@style/menu_overflow</item>
+    </style>
+    <!-- From: file:/home/jamison/android/projects/co.razoredge.shop/app/src/main/res/values/styles.xml -->
+    <eat-comment />
+
+    <style name="action_bar_style" parent="android:style/Widget.Holo.ActionBar">
+        <item name="android:displayOptions">showHome</item>
+        <item name="android:background">@color/pc_gray</item>
+    </style>
+
+    <style name="menu_overflow" parent="android:style/Widget.Holo.ActionButton.Overflow"></style>
+
+    <style name="pc_pref_cat">
+        <item name="android:background">@color/pc_cat_gray</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">6dip</item>
+    </style>
+
+</resources>
