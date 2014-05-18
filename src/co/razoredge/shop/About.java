@@ -10,6 +10,7 @@ import android.view.View.OnClickListener;
 import android.widget.*;
 import android.content.*;
 import android.widget.ListView;
+import android.net.Uri;
 
 
 public class About extends Activity{
@@ -21,6 +22,8 @@ public class About extends Activity{
 	
 		super.onCreate(savedInstanceState);
         setContentView(R.layout.about);
+		
+		addButtonListener();
 
 
 	// a button to show the pop up with a list view
@@ -37,6 +40,8 @@ public class About extends Activity{
 	findViewById(R.id.buttonShowPopUp).setOnClickListener(handler);
 
     }
+
+	
 	
     
 
@@ -129,5 +134,18 @@ public class About extends Activity{
     	}
     	return true;
 	} 
-}
+	
+	// TODO: Implement this method
+	public void addButtonListener() {
+        Button aboutButton1 = (Button)findViewById(R.id.aboutButton1); 
+        aboutButton1.setOnClickListener(new OnClickListener() {
+				public void onClick(View View)
+				{
+					Intent openBrowser =  new Intent(Intent.ACTION_VIEW,
+					Uri.parse("http://goo.gl/maps/Fq6F2"));
+					startActivity(openBrowser);
+				}
+	/*This is ugly as hell*/		
+});}}
+
 
