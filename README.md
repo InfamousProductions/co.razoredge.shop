@@ -1,4 +1,4 @@
 co.razoredge.shop
 =================
 
-Offical app for http://www.razoredge.co/
+Official app for http://www.razoredge.co/
