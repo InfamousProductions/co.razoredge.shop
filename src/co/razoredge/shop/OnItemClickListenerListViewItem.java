@@ -31,7 +31,7 @@ public class OnItemClickListenerListViewItem implements OnItemClickListener {
         // just toast it
         Toast.makeText(context, "Item: " + listItemText + ", Item ID: " + listItemId, Toast.LENGTH_SHORT).show();
 
-       ((About)context).alertDialogStores.cancel();
+       /*((AboutFragment)context).alertDialogStores.cancel();*/
         
     }
 	

@@ -1,95 +1,77 @@
 package co.razoredge.shop;
 
-import android.app.Activity;
+import co.razoredge.shop.adapter.TabsPagerAdapter;
+import android.app.ActionBar;
+import android.app.ActionBar.Tab;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
-import android.view.View;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
-import android.view.*;
-import android.view.View.OnClickListener;
-import android.widget.*;
-import android.content.*;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.view.ViewPager;
 
-public class MainActivity extends Activity {
-    /** Called when the activity is first created. */
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+public class MainActivity extends FragmentActivity implements
+		ActionBar.TabListener {
 
-        WebView mainWebView = (WebView) findViewById(R.id.mainWebView);
+	private ViewPager viewPager;
+	private TabsPagerAdapter mAdapter;
+	private ActionBar actionBar;
+	// Tab titles
+	private String[] tabs = { "Shop", "About", "Gallery", "Contact Us" };
 
-        WebSettings webSettings = mainWebView.getSettings();
-        webSettings.setJavaScriptEnabled(true);
-
-        mainWebView.setWebViewClient(new MyCustomWebViewClient());
-        mainWebView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
-
-        mainWebView.loadUrl("http://www.razoredge.co/home.html");
-    }
-
-    private class MyCustomWebViewClient extends WebViewClient {
-        @Override
-        public boolean shouldOverrideUrlLoading(WebView view, String url) {
-            view.loadUrl(url);
-            return true;
-        }
-    }
-	
-	//ID for the menu exit options
-    private final int ID_MENU_EXIT = 1;
-	private final int ID_MENU_ABOUT = 2;
-	private final int ID_MENU_CONTACT = 3;
-	
 	@Override
-    public boolean onCreateOptionsMenu(Menu menu)
-    {
-		// call the base class method
-    	super.onCreateOptionsMenu(menu);
-    
-		//the menu option text is defined in resources
-		menu.add(Menu.NONE,ID_MENU_ABOUT,Menu.NONE,R.string.aboutOption);
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
 
-		//get the MenuItem reference
-		menu.add(Menu.NONE,ID_MENU_CONTACT,Menu.NONE,R.string.contactOption);
-		
-		//get the MenuItem reference
-		menu.add(Menu.NONE,ID_MENU_EXIT,Menu.NONE,R.string.exitOption);
-		
-		return true;
+		// Initilization
+		viewPager = (ViewPager) findViewById(R.id.pager);
+		actionBar = getActionBar();
+		mAdapter = new TabsPagerAdapter(getSupportFragmentManager());
+
+		viewPager.setAdapter(mAdapter);
+		actionBar.setHomeButtonEnabled(false);
+		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);		
+
+		// Adding Tabs
+		for (String tab_name : tabs) {
+			actionBar.addTab(actionBar.newTab().setText(tab_name)
+					.setTabListener(this));
+		}
+
+		/**
+		 * on swiping the viewpager make respective tab selected
+		 * */
+		viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+
+			@Override
+			public void onPageSelected(int position) {
+				// on changing the page
+				// make respected tab selected
+				actionBar.setSelectedNavigationItem(position);
+			}
+
+			@Override
+			public void onPageScrolled(int arg0, float arg1, int arg2) {
+			}
+
+			@Override
+			public void onPageScrollStateChanged(int arg0) {
+			}
+		});
 	}
-	
+
 	@Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
-    	//check selected menu item
-    	switch(item.getItemId()){
-		case ID_MENU_EXIT:
-    	
-    		//close the Activity
-    		finish();
-    		break;
-			
-		case ID_MENU_ABOUT:
-				//define a new Intent for the second Activity
-				Intent intent = new Intent(this,About.class);
+	public void onTabReselected(Tab tab, FragmentTransaction ft) {
+	}
 
-				//start the second Activity
-				this.startActivity(intent);
-				break;
-				
-		case ID_MENU_CONTACT:
-				//define a new Intent for the second Activity
-				Intent intent2 = new Intent(this,Contact.class);
+	@Override
+	public void onTabSelected(Tab tab, FragmentTransaction ft) {
+		// on tab selected
+		// show respected fragment view
+		viewPager.setCurrentItem(tab.getPosition());
+	}
 
-				//start the second Activity
-				this.startActivity(intent2);
-				
-    	}
-    	return true;
-		} 
-	
-	
+	@Override
+	public void onTabUnselected(Tab tab, FragmentTransaction ft) {
+	}
+
 }
-	
