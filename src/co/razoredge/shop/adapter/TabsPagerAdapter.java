@@ -27,7 +27,7 @@ public class TabsPagerAdapter extends FragmentPagerAdapter {
 		case 2:
 			// Gallery fragment activity
 			return new GalleryFragment();
-        case 3:
+                case 3:
 	   		// Contact fragment activity
 			return new ContactFragment();
 		}
