@@ -13,7 +13,7 @@ public class GalleryFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 
-		View rootView = inflater.inflate(R.layout.fragment_about, container, false);
+		View rootView = inflater.inflate(R.layout.fragment_gallery, container, false);
 		
 		return rootView;
 	}
