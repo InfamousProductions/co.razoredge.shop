@@ -1,6 +1,4 @@
-co.razoredge.shop
-=================
-
-Official app for http://www.razoredge.co/
-
-Get it on the playstore https://play.google.com/store/apps/details?id=co.razoredge.shop
+#Infamous CM11 Theme
+#![](ic_launcher_small.png)
+####Download
+* [Download from Google Play](https://play.google.com/store/apps/details?id=com.infamous.cm.theme)

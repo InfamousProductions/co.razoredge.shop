@@ -1,40 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="co.razoredge.shop"
-    android:versionCode="4"
-    android:versionName="1.5" >
+<!--
+** Copyright 2014, Jamison904
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+-->
 
-    <uses-sdk 
-        android:minSdkVersion="8" 
-        android:targetSdkVersion="19" />
+<manifest 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	package="co.razoredge.shop"
+	android:versionCode="5"
+	android:versionName="2.0"
+	android:installLocation="auto">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-	<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER_HINTS" />
 
-    <application
-        android:icon="@drawable/ic_launcher"
+    <supports-screens 
+        android:anyDensity="true" 
+        android:smallScreens="true" 
+        android:normalScreens="true" 
+        android:largeScreens="true"
+        android:xlargeScreens="true"  
+        android:resizeable="true" />
+
+    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="19"/>
+
+    <!-- Change the style to something else if you want a different look
+	Please refer to ABS Styles for choosing a style you want -->
+    <application 
+        android:allowBackup="true"
         android:label="@string/app_name" 
-		android:theme="@style/Theme.Shop_theme">
-        <activity
-            android:label="@string/app_name"
-            android:name=".MainActivity" >
-            <intent-filter >
-                <action android:name="android.intent.action.MAIN" />
+        android:icon="@drawable/icon"
+        android:theme="@style/AppTheme_Dark" 
+        android:largeHeap="true" >
+		<!-- Use AppTheme_Dark for the dark version of some windows -->
 
+		<!-- Main Activity that launches when you open the app from the drawer -->
+        <activity
+            android:name="co.razoredge.shop.activity.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-		<activity
-			android:name="co.razoredge.shop.About"
-			android:label="About">
-		</activity>
-		<activity
-			android:name="co.razoredge.shop.Contact"
-			android:label="Contact">
-		</activity>
-    </application>
 
+		<!-- Various Activities inside the app -->
+		<activity 
+            android:name="co.razoredge.shop.activity.AboutThemeActivity"
+            android:label="@string/about_theme"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity 
+            android:name="co.razoredge.shop.activity.AboutDev"
+            android:theme="@style/Theme.Sherlock.Light.Dialog" >
+        </activity>  
+        <activity
+            android:name="co.razoredge.shop.activity.RequestActivity"
+            android:icon="@drawable/icon_appt"
+            android:label="@string/app_name" >
+        </activity> 
+        <activity
+            android:name="co.razoredge.shop.activity.AllIcons"
+            android:label="@string/title_all_icons" >
+        </activity>
+
+	<activity 
+     		android:name="co.razoredge.shop.activity.ApplyLauncherMain"
+            android:label="@string/launcher_title"
+            android:theme="@style/Theme.Sherlock.Light.Dialog" >
+        </activity>
+
+        <activity  
+            android:name="co.razoredge.shop.activity.Wallpaper" 
+            android:label="@string/app_name" 
+            android:icon="@drawable/icon_gallery" 
+            android:finishOnCloseSystemDialogs="true">
+            <intent-filter>
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
 </manifest>
