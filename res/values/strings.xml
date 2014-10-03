@@ -29,6 +29,10 @@
  	<string name="theme_preview3">theme_preview3</string>
   	<string name="theme_preview4">theme_preview4</string>
   	<string name="theme_preview5">theme_preview5</string>
+  	<string name="theme_preview6">theme_preview6</string>
+  	<string name="theme_preview7">theme_preview7</string>
+ 	<string name="theme_preview8">theme_preview8</string>
+  	<string name="theme_preview9">theme_preview9</string>
   	
 		<!-- Apex Theme settings -->
 	<bool name="config_apexskin">true</bool>
