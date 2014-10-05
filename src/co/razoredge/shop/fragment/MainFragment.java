@@ -159,7 +159,7 @@ public class MainFragment extends SherlockFragment{
 			        	break;
 					case PAY:
 						Intent payment = new Intent(Intent.ACTION_VIEW).setData(Uri.parse
-						("http://goo.gl/VxWy05"));
+						("http://goo.gl/4CTOX2"));
 						startActivity(payment);
 						break;
 					
@@ -190,7 +190,7 @@ public class MainFragment extends SherlockFragment{
 		        		break;	
 					case PAY:
 						Intent payment = new Intent(Intent.ACTION_VIEW).setData(Uri.parse
-						("http://goo.gl/VxWy05"));
+						("http://goo.gl/4CTOX2"));
 						startActivity(payment);
 						break;
 					

@@ -24,7 +24,7 @@
 		<!-- Version Number: Add more or remove some -->
 	<string name="changelog_1">Version 2.0</string>
 	<string name="changelog_2">Version 2.1</string>
-	<string name="changelog_3">Version 4.6.1</string>
+	<string name="changelog_3">Version 2.2</string>
 	<string name="changelog_4">Version 4.7</string>
 	<string name="changelog_5">Version 4.7.5</string>
 	<string name="changelog_6">Version 2.1.2</string>
@@ -57,8 +57,8 @@
 	
 	<!-- Changelog 3 -->						
 		<string name="cl_list_3">
-		    &#8226; Removed PlayStore until I debug layouts to fix FC
-			\n&#8226; Added some new images because I was working when I found out 
+		    &#8226; Debug layouts to fix FC on some dpi sizes
+			\n&#8226; Fixed pay via PayPal
 		</string>
 	
 	<!-- Changelog 4 -->						
