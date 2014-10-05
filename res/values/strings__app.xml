@@ -89,8 +89,8 @@
 	<string name="title_nav">Directions</string>
 	
 		<!-- OverFlow Menu -->
-	<string name="title_rate">Rate Theme</string>
-	<string name="title_share">Share Theme</string>
+	<string name="title_rate">Rate App</string>
+	<string name="title_share">Share App</string>
 	<string name="title_email">Email Frank</string>
 	<string name="title_about">About Frank</string>
 	<string name="title_pay">Paypal</string>
@@ -99,7 +99,7 @@
 	<string name="submit">Submit</string>
 	
 		<!-- Labels for app icons -->
-	<string name="about_theme">About Theme</string>
+	<string name="about_theme">About the Shop</string>
 	<string name="googleme">Circle On Google+</string>
 	
 		<!-- Misc Labels -->

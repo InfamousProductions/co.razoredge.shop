@@ -98,6 +98,58 @@
                     android:scaleType="fitCenter"
                     android:src="@drawable/theme_preview5" />
             </LinearLayout>
+			
+			<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/content_description"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/theme_preview6" />
+            </LinearLayout>
+			
+			<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/content_description"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/theme_preview7" />
+            </LinearLayout>
+			
+			<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/content_description"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/theme_preview8" />
+            </LinearLayout>
+			
+			<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/content_description"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/theme_preview9" />
+            </LinearLayout>
         </ViewFlipper>
 
         <LinearLayout
