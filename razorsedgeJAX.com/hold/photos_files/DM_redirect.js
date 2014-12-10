@@ -1,0 +1,1 @@
+function DM_redirect(url){if(navigator.userAgent.match(/iPhone|iPod|BlackBerry|Android|webOS|IEMobile|Opera Mini|Opera Mobi|HTC|LG-|LGE|SAMSUNG|Samsung|SEC-SGH|Symbian|Nokia|PlayStation|PLAYSTATION|Nintendo DSi/i)){window.location.href=url;}}
